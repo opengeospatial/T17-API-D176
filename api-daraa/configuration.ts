@@ -61,14 +61,22 @@ export class Configuration {
         // init default cwApiKeyHeader credential
         if (!this.credentials['cwApiKeyHeader']) {
             this.credentials['cwApiKeyHeader'] = () => {
-                return this.apiKeys['cwApiKeyHeader'] || this.apiKeys['CubeWerx-API-Key'];
+                if (this.apiKeys === null || this.apiKeys === undefined) {
+                    return undefined;
+                } else {
+                    return this.apiKeys['cwApiKeyHeader'] || this.apiKeys['CubeWerx-API-Key'];
+                }
             };
         }
 
         // init default cwApiKeyQuery credential
         if (!this.credentials['cwApiKeyQuery']) {
             this.credentials['cwApiKeyQuery'] = () => {
-                return this.apiKeys['cwApiKeyQuery'] || this.apiKeys['apiKey'];
+                if (this.apiKeys === null || this.apiKeys === undefined) {
+                    return undefined;
+                } else {
+                    return this.apiKeys['cwApiKeyQuery'] || this.apiKeys['apiKey'];
+                }
             };
         }
 

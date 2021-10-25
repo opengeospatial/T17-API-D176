@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 api.module.ts
 api/api.ts
@@ -49,4 +48,7 @@ model/tilesInfoTileMatrixSetLinks.ts
 model/tileset.ts
 model/tilesets.ts
 model/tilesetsTilesets.ts
+ng-package.json
+package.json
+tsconfig.json
 variables.ts

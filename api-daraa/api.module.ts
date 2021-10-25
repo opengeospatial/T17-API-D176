@@ -11,6 +11,7 @@ import { MapTilesService } from './api/mapTiles.service';
 import { MapsService } from './api/maps.service';
 import { SchemasService } from './api/schemas.service';
 import { SourceImagesService } from './api/sourceImages.service';
+import { StylesService } from './api/styles.service';
 import { TileMatrixSetsService } from './api/tileMatrixSets.service';
 import { VectorFeaturesAndCatalogueRecordsService } from './api/vectorFeaturesAndCatalogueRecords.service';
 

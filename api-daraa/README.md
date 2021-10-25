@@ -1,4 +1,4 @@
-## @
+## api-daraa@9.3.62
 
 ### Building
 
@@ -19,7 +19,7 @@ Navigate to the folder of your consuming project and run one of next commands.
 _published:_
 
 ```
-npm install @ --save
+npm install api-daraa@9.3.62 --save
 ```
 
 _without publishing (not recommended):_
@@ -39,7 +39,7 @@ npm link
 
 In your project:
 ```
-npm link 
+npm link api-daraa
 ```
 
 __Note for Windows users:__ The Angular CLI has troubles to use linked npm packages.
@@ -54,7 +54,7 @@ In your Angular project:
 
 ```
 // without configuring providers
-import { ApiModule } from '';
+import { ApiModule } from 'api-daraa';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -73,7 +73,7 @@ export class AppModule {}
 
 ```
 // configuring providers
-import { ApiModule, Configuration, ConfigurationParameters } from '';
+import { ApiModule, Configuration, ConfigurationParameters } from 'api-daraa';
 
 export function apiConfigFactory (): Configuration {
   const params: ConfigurationParameters = {
@@ -93,7 +93,7 @@ export class AppModule {}
 
 ```
 // configuring providers with an authentication service that manages your access tokens
-import { ApiModule, Configuration } from '';
+import { ApiModule, Configuration } from 'api-daraa';
 
 @NgModule({
     imports: [ ApiModule ],
@@ -117,7 +117,7 @@ export class AppModule {}
 ```
 
 ```
-import { DefaultApi } from '';
+import { DefaultApi } from 'api-daraa';
 
 export class AppComponent {
     constructor(private apiGateway: DefaultApi) { }
@@ -152,10 +152,10 @@ export class AppModule {
 
 
 ### Set service base path
-If different than the generated base path, during app bootstrap, you can provide the base path to your service. 
+If different than the generated base path, during app bootstrap, you can provide the base path to your service.
 
 ```
-import { BASE_PATH } from '';
+import { BASE_PATH } from 'api-daraa';
 
 bootstrap(AppComponent, [
     { provide: BASE_PATH, useValue: 'https://your-web-service.com' },
@@ -164,7 +164,7 @@ bootstrap(AppComponent, [
 or
 
 ```
-import { BASE_PATH } from '';
+import { BASE_PATH } from 'api-daraa';
 
 @NgModule({
     imports: [],
@@ -188,7 +188,7 @@ export const environment = {
 
 In the src/app/app.module.ts:
 ```
-import { BASE_PATH } from '';
+import { BASE_PATH } from 'api-daraa';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -200,4 +200,4 @@ import { environment } from '../environments/environment';
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-```  
+```
